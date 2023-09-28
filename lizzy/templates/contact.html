@@ -1,19 +1,176 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Contact Me</title>
-    </head>
-    <h1 align ="center">Contact Me</h1>
-    <form>
-<fieldset>
-        <label>NAME: </label>
-      <input type="text" name="name" id="name" placeholder="NAME" required> <br>
-      <label>LASTNAME: </label> 
-      <input type="text" name="lastname" id="lastname" placeholder="LASTNAME"><br>
-      <label>Email</label>
-      <input type="email" name="email" id="email" placeholder="E-mail" required><br>
-      <label>Cellphone Number: </label>
-      <input type="number" name="Cellphone" id="cellphone" placeholder="Cellphone" required>
-      <input type="submit">
-    </fieldset>
-      </form>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+             background:#6b5b95;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #6b5b95;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            font-size: 22px;
+            color: black;
+        }
+        
+        input[type="text"], textarea {
+            width: 95%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 2px solid #6b5b95;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+        
+        textarea {
+            height: 160px;
+        }
+        
+        input[type="submit"] {
+            background-color: #6b5b95;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #6f4fd7;
+        }
+		input[type="tel"], textarea {
+            width: 95%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 2px solid #6b5b95;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+		input[type="email"], textarea {
+            width: 95%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 2px solid #6b5b95;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+		.header-nav li {
+    display: inline;
+    margin-right: 20px;
+}
+.header {
+    background-color: #fff; /* Purple background for the header */
+    color: black;
+    display: flex; /* Use flexbox to control alignment */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Center vertically */
+    padding: 20px 0;
+}
+
+.header-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation styles */
+.header-nav {
+    list-style: none;
+    display: flex; /* Display navigation links in a row */
+    align-items: center; /* Center vertically */
+}
+
+.header-nav li {
+    margin-right: 20px; /* Add spacing between navigation items */
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+/* Social media icons */
+.header-nav img {
+    width: 30px; /* Set a fixed width for the icons */
+    height: 30px; /* Set a fixed height for the icons */
+    margin-right: 20px; /* Add spacing between icons and navigation links */
+}
+.footer {
+    background-color: #fff;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+}
+
+    </style>
+</head>
+<body>
+<header class="header">
+    <nav class="header-nav">
+        <ul>
+            <li><a href="/about">About Me</a></li>
+            <li><a href="/">Homepage</a></li>
+        </ul>
+    </nav>
+    <nav class="header-nav">
+        <a href="https://instagram.com/_c.h.a.n.d.r.a__l.e.l.a_?igshid=OGQ5ZDc2ODk2ZA=="><img src="/static/img/icons8-instagram-30.png"></a>
+        <a href="https://www.facebook.com/july.fivteen"><img src="/static/img/icons8-facebook-30.png"></a>
+    </nav>
+</header>
+    <div class="container">
+        <h1>Contact Me</h1>
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" placeholder="Example@gamil.com" name="email" required>
+            </div>
+			<div class="form-group">
+                <label for="tel">Contact Numbers</label>
+                <input type="tel" id="tel" name="tel" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Message How Can I Help You" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+			
+        </form>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2023 Lizbeth Mokgala for further communication you can email me on lizbethmokgala@gmail.com</p>
+    </footer>
+</body>
+</html>
